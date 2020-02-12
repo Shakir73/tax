@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "creation": "2020-02-11 20:20:49.825194",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "store_information_section",
+  "store_name",
+  "qb_code",
+  "column_break_4",
+  "acc_no",
+  "status",
+  "tax_information_section",
+  "schedule_date",
+  "tax_type",
+  "tax_year",
+  "tax_period",
+  "tax_form_type",
+  "column_break_12",
+  "due_date",
+  "payment_frequency",
+  "payment_mode",
+  "payment_status",
+  "section_break_17",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "description": "Store/Business Legal Name",
+   "fieldname": "store_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Store Name",
+   "options": "Store Information",
+   "reqd": 1
+  },
+  {
+   "description": "QuickBooks Code",
+   "fetch_from": "store_name.store_no",
+   "fieldname": "qb_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "QB Code"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Scheduled Tax",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "description": "Store's Bank Account No",
+   "fetch_from": "store_name.account_no",
+   "fieldname": "acc_no",
+   "fieldtype": "Data",
+   "label": "A/c No."
+  },
+  {
+   "fieldname": "store_information_section",
+   "fieldtype": "Section Break",
+   "label": "Store Information"
+  },
+  {
+   "fieldname": "tax_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Information"
+  },
+  {
+   "description": "Date this Schedule Form Created",
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Schedule Date",
+   "reqd": 1
+  },
+  {
+   "description": "Applicable Type of Tax for Store",
+   "fieldname": "tax_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tax Type",
+   "options": "\nTax Payroll\nNotice Payment\nReal Estate Tax\nPersonal Property Tax\nSchool Tax\nCounty Tax\nCity Tax\nLicense Payment\nOther Misc Tax",
+   "reqd": 1
+  },
+  {
+   "description": "Year of Tax",
+   "fieldname": "tax_year",
+   "fieldtype": "Date",
+   "label": "Tax Year ",
+   "reqd": 1
+  },
+  {
+   "description": "Tax Period (Monthly/Quarterly)",
+   "fieldname": "tax_period",
+   "fieldtype": "Date",
+   "label": "Tax Period",
+   "reqd": 1
+  },
+  {
+   "description": "Tax Form Type",
+   "fieldname": "tax_form_type",
+   "fieldtype": "Data",
+   "label": "Tax Form Type",
+   "reqd": 1
+  },
+  {
+   "description": "Due Date",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "reqd": 1
+  },
+  {
+   "description": "Payment Frequency",
+   "fieldname": "payment_frequency",
+   "fieldtype": "Data",
+   "label": "Payment Frequency",
+   "reqd": 1
+  },
+  {
+   "description": "Payment Mode",
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nE-Check\nPaper Check\nBatch Provider\nPhone Payment\nCard Payment\nOther Mode",
+   "reqd": 1
+  },
+  {
+   "description": "Days left, or Overdue?",
+   "fieldname": "payment_status",
+   "fieldtype": "Data",
+   "label": "Payment Status",
+   "reqd": 1
+  },
+  {
+   "description": "Remarks or Reminder if any",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2020-02-11 20:52:21.608594",
+ "modified_by": "Administrator",
+ "module": "Tax",
+ "name": "Scheduled Tax",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
